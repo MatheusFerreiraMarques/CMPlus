@@ -16,7 +16,7 @@ export const FileUploader: React.FC<FileUploaderProps> = ({ onFileUpload }) => {
   return (
     <div className="file-uploader">
       <label htmlFor="file-input" className="upload-button">
-      Escolher arquivo
+      Escolher Planilha
       </label>
       <input
         type="file"
