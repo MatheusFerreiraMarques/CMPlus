@@ -26,18 +26,18 @@ export function Header() {
 
       {/* Overlay que fecha a sidebar quando clicado fora */}
       {isSidebarOpen && (
-        <div className={styles.overlay} onClick={handleOutsideClick}></div>
+      <div className={styles.overlay} onClick={handleOutsideClick}></div>
       )}
 
-      {/* Sidebar */}
       <div className={`${styles.sidebar} ${isSidebarOpen ? styles.open : ''}`}>
         <ul>
           <li>
             <a href="/sheets-imports">Tratamento de Planilhas</a>
           </li>
-          {/* Adicione outros links conforme necessário */}
+        {/* Outros itens */}
         </ul>
       </div>
+
     </header>
   );
 }

@@ -1,6 +1,29 @@
+.overlay {
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 100px);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+  z-index: 900;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 1;
+  }
+}
+
+
 .header {
     background: var(--gray-800);
-    height: 100px;
+    height: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +38,7 @@
   
   .menuButton {
     position: absolute;
-    right: 20px; /* Coloca o botão na direita */
+    right: 2rem;
     top: 50%;
     transform: translateY(-50%);
     font-size: 2rem;
@@ -23,14 +46,21 @@
     border: none;
     color: var(--white);
     cursor: pointer;
+    outline: none;
   }
   
-  /* Estilo para a Sidebar à Direita */
+  .menuButton:focus,
+  .menuButton:focus-visible,
+  .menuButton:active {
+    outline: none;
+    box-shadow: none;
+  }
+  
   .sidebar {
     position: fixed;
-    top: 100px; /* Começa abaixo do header */
-    right: -250px; /* Inicialmente escondida à direita */
-    width: 250px;
+    top: 6rem;
+    right: -20rem;
+    width: 17.5rem;
     height: 100%;
     background-color: var(--gray-900);
     color: var(--white);
@@ -41,7 +71,7 @@
   }
   
   .sidebar.open {
-    right: 0; /* Sidebar aparece à direita */
+    right: 0;
   }
   
   .sidebar ul {
@@ -57,6 +87,9 @@
     color: var(--white);
     text-decoration: none;
     font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .sidebar a:hover {
